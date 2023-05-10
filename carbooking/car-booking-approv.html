@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Booking</title>
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.ico" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400&family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/simple-datatables/style.css"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Mar 09 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="../mih-intranet.html" class="logo d-flex align-items-center">
+          <img src="../assets/img/logo_sticky.png" alt="" />
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div>
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+          <li class="nav-item dropdown pe-3">
+            <a
+              class="nav-link nav-profile d-flex align-items-center pe-0"
+              href="#"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                class="rounded-circle"
+                src="../assets/img/user profile.webp"
+                alt="User Profile"
+              />
+              <span class="d-none d-md-block dropdown-toggle ps-2"
+                >Karnanan Purimanuruk</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+            >
+              <li class="dropdown-header">
+                <h6>Karnanan Purimanuruk</h6>
+                <span>Information Technology Dep.</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="../users-profile.html"
+                >
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item d-flex align-items-center"
+                  href="../users-profile.html"
+                >
+                  <i class="bi bi-gear"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="../mih-intranet.html">
+            <i class="bi bi-house"></i>
+            <span>หน้าหลัก</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-booking.html">
+            <i class="bi bi-car-front"></i>
+            <span>หน้าหลักระบบขอใช้รถ</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-booking-form.html">
+            <i class="bi bi-chat-text"></i>
+            <span>ขอใช้รถ</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-booking-asign.html">
+            <i class="bi bi-filter-square"></i>
+            <span>จัดการคำขอ</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="car-booking-approv.html">
+            <i class="bi bi-book"></i>
+            <span>อนุมัติขอใช้รถ</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-booking-rec.html">
+            <i class="bi bi-calendar3"></i>
+            <span>บันทึกการใช้รถ</span>
+          </a>
+        </li>
+        <li class="nav-heading">การเติมน้ำมันเชื้อเพลิง</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-booking-fuel.html">
+            <i class="bi bi-chat-left-text"></i>
+            <span>บันทึกการเติมน้ำมัน</span>
+          </a>
+        </li>
+
+        <li class="nav-heading">การซ่อมบำรุง</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <i class="bi bi-bookmark"></i>
+            <span>ขออนุมัติซ่อมบำรุง</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <i class="bi bi-bookmark"></i>
+            <span>อนุมัติซ่อมบำรุง</span>
+          </a>
+        </li>
+        <li class="nav-heading">รายงานการใช้รถ</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <i class="bi bi-chat-left-text"></i>
+            <span>รายงานการใช้รถ</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#">
+            <i class="bi bi-chat-left-text"></i>
+            <span>รายงานการซ่อมบำรุง</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- ======= Main ======= -->
+    <main id="main" class="main">
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body pt-3">
+                  <!-- Bordered Tabs -->
+                  <ul class="nav nav-tabs nav-tabs-bordered">
+                    <li class="nav-item">
+                      <button
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#carbooking-asign-list"
+                      >
+                        รายการขอใช้รถ
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#carbooking-asign-form"
+                      >
+                        อนุมัติขอใช้รถ
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content pt-3">
+                    <div
+                      class="tab-pane fade profile-overview pt-2"
+                      id="carbooking-asign-form"
+                    >
+                      <h5 class="card-title">อนุมัติขอใช้รถ</h5>
+                      <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-3">
+                          <label for="departures-datetime" class="form-label"
+                            >วันที่-เวลา</label
+                          >
+                          <input
+                            type="datetime-local"
+                            class="form-control"
+                            required
+                            id="departures-datetime"
+                          />
+                          <div class="invalid-feedback">
+                            กรุณาระบุวันที่-เวลา
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="arrivals-datetime" class="form-label"
+                            >ถึงวันที่-เวลา</label
+                          >
+                          <input
+                            type="datetime-local"
+                            class="form-control"
+                            required=""
+                            id="arrivals-datetime"
+                          />
+                          <div class="invalid-feedback">
+                            กรุณาระบุวันที่-เวลา
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputlocation" class="form-label"
+                            >สถานที่</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            required=""
+                            id="inputlocation"
+                          />
+                          <div class="invalid-feedback">กรุณาระบุสถานที่</div>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputstate" class="form-label"
+                            >จังหวัด</label
+                          >
+                          <select id="inputstate" class="form-select" required>
+                            <option selected disabled value="">
+                              กรุณาเลือก...
+                            </option>
+                            <option value="Mukdahan">มุกดาหาร</option>
+                          </select>
+
+                          <div class="invalid-feedback">กรุณาระบุจังหวัด</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputlocation" class="form-label"
+                            >ผู้โดยสาร</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            required=""
+                            id="inputlocation"
+                          />
+                          <div class="invalid-feedback">กรุณาระบุสถานที่</div>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputtel" class="form-label"
+                            >เบอร์โทรศัพท์ติดต่อ</label
+                          >
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="inputtel"
+                          />
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputcar" class="form-label"
+                            >ประเภทรถ</label
+                          >
+                          <select id="inputcar" class="form-select" required>
+                            <option selected disabled value="">
+                              ไม่ระบุ...
+                            </option>
+                            <option value="">...</option>
+                          </select>
+                          <div class="invalid-feedback">ประเภทรถ</div>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputcarno" class="form-label"
+                            >ทะเบียนรถ</label
+                          >
+                          <select id="inputcarno" class="form-select" required>
+                            <option selected disabled value="">
+                              ไม่ระบุ...
+                            </option>
+                            <option value="">...</option>
+                          </select>
+                          <div class="invalid-feedback">กรุณาระบุทะเบียนรถ</div>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="inputstaff" class="form-label"
+                            >พนักงานขับรถ</label
+                          >
+                          <select id="inputstaff" class="form-select" required>
+                            <option selected disabled value="">
+                              ไม่ระบุ...
+                            </option>
+                            <option value="">...</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            กรุณาระบุพนักงานขับรถ
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <label for="inputdetail" class="form-label"
+                            >รายละเอียด</label
+                          >
+                          <textarea
+                            type="text"
+                            class="form-control"
+                            required=""
+                            id="inputdetail"
+                          ></textarea>
+                          <div class="invalid-feedback">
+                            กรุณาระบุรายละเอียด
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <button type="submit" class="btn btn-primary">
+                            อนุมัติ
+                          </button>
+
+                          <button type="submit" class="btn btn-danger">
+                            ไม่อนุมัติ
+                          </button>
+                          <button type="submit" class="btn btn-success">
+                            พิมพ์
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div
+                      class="tab-pane fade show active profile-overview pt-2"
+                      id="carbooking-asign-list"
+                    >
+                      <h5 class="card-title">รายการขอใช้รถ</h5>
+                      <table class="table datatable">
+                        <thead>
+                          <tr>
+                            <th scope="col">วันที่</th>
+                            <th scope="col">เวลา</th>
+                            <th scope="col">ประเภทรถ</th>
+                            <th scope="col">สถานที่</th>
+                            <th scope="col">แผนก</th>
+                            <th scope="col">สถานะ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">31/03/2566</th>
+                            <td>15.00 - 16.00</td>
+                            <td>รถกระบะ</td>
+
+                            <td>ห้องปฏิบัติการ</td>
+                            <td>ส่ง LAB บขส</td>
+                            <td>
+                              <span class="badge rounded-pill bg-warning"
+                                >ขอใช้รถ</span
+                              ><i class="bi bi-pencil-square ms-3"></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">31/03/2566</th>
+                            <td>15.00 - 16.00</td>
+                            <td>รถกระบะ</td>
+
+                            <td>ห้องปฏิบัติการ</td>
+                            <td>ส่ง LAB บขส</td>
+                            <td>
+                              <span class="badge rounded-pill bg-warning"
+                                >ขอใช้รถ</span
+                              ><i class="bi bi-pencil-square ms-3"></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">31/03/2566</th>
+                            <td>15.00 - 16.00</td>
+                            <td>รถกระบะ</td>
+
+                            <td>ห้องปฏิบัติการ</td>
+                            <td>ส่ง LAB บขส</td>
+                            <td>
+                              <span class="badge rounded-pill bg-warning"
+                                >ขอใช้รถ</span
+                              ><i class="bi bi-pencil-square ms-3"></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">31/03/2566</th>
+                            <td>15.00 - 16.00</td>
+                            <td>รถกระบะ</td>
+
+                            <td>ห้องปฏิบัติการ</td>
+                            <td>ส่ง LAB บขส</td>
+                            <td>
+                              <span class="badge rounded-pill bg-warning"
+                                >ขอใช้รถ</span
+                              ><i class="bi bi-pencil-square ms-3"></i>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">31/03/2566</th>
+                            <td>15.00 - 16.00</td>
+                            <td>รถกระบะ</td>
+                            <td>ห้องปฏิบัติการ</td>
+                            <td>ส่ง LAB บขส</td>
+                            <td>
+                              <span class="badge rounded-pill bg-warning"
+                                >ขอใช้รถ</span
+                              ><i class="bi bi-pencil-square ms-3"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- End Bordered Tabs -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../assets/vendor/quill/quill.min.js"></script>
+    <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
