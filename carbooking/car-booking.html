@@ -141,59 +141,65 @@
         </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="car-booking-form.html">
-            <i class="bi bi-chat-text"></i>
+            <i class="bi bi-chat-left-text"></i>
             <span>ขอใช้รถ</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="car-booking-asign.html">
-            <i class="bi bi-filter-square"></i>
+            <i class="bi bi-journal-text"></i>
             <span>จัดการคำขอ</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="car-booking-approv.html">
-            <i class="bi bi-book"></i>
+            <i class="bi bi-journal-check"></i>
             <span>อนุมัติขอใช้รถ</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="car-booking-rec.html">
-            <i class="bi bi-calendar3"></i>
+            <i class="bi bi-pencil-square"></i>
             <span>บันทึกการใช้รถ</span>
           </a>
         </li>
         <li class="nav-heading">การเติมน้ำมันเชื้อเพลิง</li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="car-booking-fuel.html">
-            <i class="bi bi-chat-left-text"></i>
+            <i class="bi bi-fuel-pump"></i>
             <span>บันทึกการเติมน้ำมัน</span>
           </a>
         </li>
 
         <li class="nav-heading">การซ่อมบำรุง</li>
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#">
-            <i class="bi bi-bookmark"></i>
+          <a class="nav-link collapsed" href="car-ma-form.html">
+            <i class="bi bi-chat-left-text"></i>
             <span>ขออนุมัติซ่อมบำรุง</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#">
-            <i class="bi bi-bookmark"></i>
+          <a class="nav-link collapsed" href="car-ma-approv.html">
+            <i class="bi bi-journal-check"></i>
             <span>อนุมัติซ่อมบำรุง</span>
           </a>
         </li>
-        <li class="nav-heading">รายงานการใช้รถ</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-ma-rec.html">
+            <i class="bi bi-pencil-square"></i>
+            <span>บันทึกผลการซ่อมบำรุง</span>
+          </a>
+        </li>
+        <li class="nav-heading">รายงาน</li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="#">
-            <i class="bi bi-chat-left-text"></i>
+            <i class="bi bi-bar-chart"></i>
             <span>รายงานการใช้รถ</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="#">
-            <i class="bi bi-chat-left-text"></i>
+            <i class="bi bi-bar-chart"></i>
             <span>รายงานการซ่อมบำรุง</span>
           </a>
         </li>
@@ -201,14 +207,26 @@
     </aside>
     <!-- ======= Main ======= -->
     <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>หน้าหลักระบบขอใช้รถ</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item my-2">
+              <a href="../mih-intranet.html">หน้าหลัก</a>
+            </li>
+            <li class="breadcrumb-item my-2">หน้าหลักระบบขอใช้รถ</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- End Page Title -->
       <section class="section dashboard">
         <div class="row">
           <div class="col-lg-12">
             <div class="row">
               <div class="col-xxl-3 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card request-card">
                   <div class="card-body">
-                    <h2 class="card-title">รายการขอใช้รถวันนี้</h2>
+                    <h2 class="card-title">ขอใช้รถ</h2>
 
                     <div class="d-flex align-items-center">
                       <div
@@ -227,9 +245,9 @@
                 </div>
               </div>
               <div class="col-xxl-3 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card waitapprov-card">
                   <div class="card-body">
-                    <h2 class="card-title">อนุมัติ</h2>
+                    <h2 class="card-title">จัดการคำขอ</h2>
 
                     <div class="d-flex align-items-center">
                       <div
@@ -248,9 +266,9 @@
                 </div>
               </div>
               <div class="col-xxl-3 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card approv-card">
                   <div class="card-body">
-                    <h2 class="card-title">รออนุมัติ</h2>
+                    <h2 class="card-title">อนุมัติ</h2>
 
                     <div class="d-flex align-items-center">
                       <div
@@ -269,7 +287,7 @@
                 </div>
               </div>
               <div class="col-xxl-3 col-md-6">
-                <div class="card info-card sales-card">
+                <div class="card info-card total-card">
                   <div class="card-body">
                     <h2 class="card-title">จำนวนรถทั้งหมด</h2>
 
@@ -293,97 +311,118 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="carlendar">
+                <div class="month">
+                  <ul>
+                    <li class="prev">
+                      <i class="bi bi-arrow-left-circle"></i>
+                    </li>
+                    <li class="next">
+                      <i class="bi bi-arrow-right-circle"></i>
+                    </li>
+                    <li>
+                      พฤษภาคม<br /><span style="font-size: 18px">2566</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <ul class="weekdays">
+                  <li>Mo</li>
+                  <li>Tu</li>
+                  <li>We</li>
+                  <li>Th</li>
+                  <li>Fr</li>
+                  <li>Sa</li>
+                  <li>Su</li>
+                </ul>
+
+                <ul class="days">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>
+                    <span class="active">10</span>
+                  </li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li>
+                  <li>30</li>
+                  <li>31</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">รายการขอใช้รถ | Today</h5>
 
-                <!-- Table with stripped rows -->
-                <table class="table datatable">
+                <!-- Table with hoverable rows -->
+                <table class="table table-hover">
                   <thead>
                     <tr>
-                      <th scope="col">วันที่</th>
                       <th scope="col">เวลา</th>
-                      <th scope="col">ประเภทรถ</th>
+                      <th scope="col">ทะเบียนรถ</th>
                       <th scope="col">สถานที่</th>
-                      <th scope="col">แผนก</th>
-                      <th scope="col">สถานะ</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">31/03/2566</th>
-                      <td>15.00 - 16.00</td>
-                      <td>รถกระบะ</td>
-
-                      <td>ห้องปฏิบัติการ</td>
-                      <td>ส่ง LAB บขส</td>
-                      <td>
-                        <span class="badge rounded-pill bg-primary"
-                          >อนุมัติ</span
-                        >
-                      </td>
+                      <th scope="row">09.00</th>
+                      <td>กก 1234</td>
+                      <td>รพ.มุกดาหาร</td>
                     </tr>
                     <tr>
-                      <th scope="row">31/03/2566</th>
-                      <td>15.00 - 16.00</td>
-                      <td>รถกระบะ</td>
-
-                      <td>ห้องปฏิบัติการ</td>
-                      <td>ส่ง LAB บขส</td>
-                      <td>
-                        <span class="badge rounded-pill bg-warning"
-                          >รออนุมัติ</span
-                        ><i class="bi bi-pencil-square ms-3"></i>
-                      </td>
+                      <th scope="row">09.00</th>
+                      <td>กก 1234</td>
+                      <td>รพ.มุกดาหาร</td>
                     </tr>
                     <tr>
-                      <th scope="row">31/03/2566</th>
-                      <td>15.00 - 16.00</td>
-                      <td>รถกระบะ</td>
-
-                      <td>ห้องปฏิบัติการ</td>
-                      <td>ส่ง LAB บขส</td>
-                      <td>
-                        <span class="badge rounded-pill bg-warning"
-                          >รออนุมัติ</span
-                        >
-                      </td>
+                      <th scope="row">09.00</th>
+                      <td>กก 1234</td>
+                      <td>รพ.มุกดาหาร</td>
                     </tr>
                     <tr>
-                      <th scope="row">31/03/2566</th>
-                      <td>15.00 - 16.00</td>
-                      <td>รถกระบะ</td>
-
-                      <td>ห้องปฏิบัติการ</td>
-                      <td>ส่ง LAB บขส</td>
-                      <td>
-                        <span class="badge rounded-pill bg-warning"
-                          >รออนุมัติ</span
-                        >
-                      </td>
+                      <th scope="row">09.00</th>
+                      <td>กก 1234</td>
+                      <td>รพ.มุกดาหาร</td>
                     </tr>
                     <tr>
-                      <th scope="row">31/03/2566</th>
-                      <td>15.00 - 16.00</td>
-                      <td>รถกระบะ</td>
-
-                      <td>ห้องปฏิบัติการ</td>
-                      <td>ส่ง LAB บขส</td>
-                      <td>
-                        <span class="badge rounded-pill bg-warning"
-                          >รออนุมัติ</span
-                        >
-                      </td>
+                      <th scope="row">09.00</th>
+                      <td>กก 1234</td>
+                      <td>รพ.มุกดาหาร</td>
                     </tr>
                   </tbody>
                 </table>
-                <!-- End Table with stripped rows -->
+                <!-- End Table with hoverable rows -->
               </div>
             </div>
           </div>
         </div>
-        <div class="row"></div>
       </section>
     </main>
 
