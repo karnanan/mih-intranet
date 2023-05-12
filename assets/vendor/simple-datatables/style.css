@@ -8,8 +8,8 @@
 
 .datatable-top,
 .datatable-bottom {
-  padding: 8px 10px;
-  margin-bottom: 16px;
+  /* padding: 8px 10px; */
+  margin: 24px 0px;
 }
 
 .datatable-top > nav:first-child,

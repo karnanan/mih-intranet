@@ -135,14 +135,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="car-management.html">
-                    <i class="bi bi-folder-plus"></i>
+                <a class="nav-link " href="car-management.html">
+                    <i class="bi bi-pencil-square"></i>
                     <span>การจัดการข้อมูลรถยนต์</span>
                 </a>
             </li>
             <li class="nav-heading">การเติมน้ำมันเชื้อเพลิง</li>
             <li class="nav-item">
-                <a class="nav-link" href="car-booking-fuel.html">
+                <a class="nav-link collapsed" href="car-booking-fuel.html">
                     <i class="bi bi-fuel-pump"></i>
                     <span>บันทึกการเติมน้ำมัน</span>
                 </a>
@@ -185,7 +185,7 @@
     <!-- ======= Main ======= -->
     <main id="main" class="main">
         <div class="pagetitle">
-            <h1>บันทึกการเติมน้ำมัน</h1>
+            <h1>การจัดการข้อมูลรถยนต์</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item my-2">
@@ -194,7 +194,7 @@
                     <li class="breadcrumb-item my-2">
                         <a href="car-booking.html">หน้าหลักระบบขอใช้รถ</a>
                     </li>
-                    <li class="breadcrumb-item my-2">บันทึกการเติมน้ำมัน</li>
+                    <li class="breadcrumb-item my-2">การจัดการข้อมูลรถยนต์</li>
                 </ol>
             </nav>
         </div>
@@ -213,32 +213,20 @@
                                 </li>
                                 <li class="nav-item">
                                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#carbooking-asign-form">
-                      บันทึกการเติมน้ำมัน
+                      การจัดการข้อมูลรถยนต์
                     </button>
                                 </li>
                             </ul>
                             <div class="tab-content pt-3">
                                 <div class="tab-pane fade profile-overview pt-2" id="carbooking-asign-form">
-                                    <h5 class="card-title">บันทึกการเติมน้ำมัน</h5>
+                                    <h5 class="card-title">การจัดการข้อมูลรถยนต์</h5>
 
                                     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
                                     <div class="row">
                                         <div class="col-md-8">
                                             <form class="row g-3 needs-validation" novalidate>
                                                 <div class="col-md-4">
-                                                    <label for="fuel-date" class="form-label">วันที่</label
-                            >
-                            <input
-                              type="date"
-                              class="form-control"
-                              required
-                              id="fuel-date"
-                            />
-                            <div class="invalid-feedback">กรุณาระบุวันที่</div>
-                          </div>
-                          <div class="col-md-4">
-                            <label for="inputcartype" class="form-label"
-                              >ประเภทรถ</label
+                                                    <label for="inputcartype" class="form-label">ประเภทรถ</label
                             >
                             <select id="inputcartype" class="form-select" required>
                               <option selected disabled value="">
@@ -279,33 +267,8 @@
                             </div>
                           </div>
                           <div class="col-md-4">
-                            <label for="inputmig-before" class="form-label"
-                              >เลขไมล์ครั้งก่อน</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control"
-                              required=""
-                              id="inputmig-before"
-                            ></input>
-                          </div>
-                          <div class="col-md-4">
-                            <label for="inputmig" class="form-label"
-                              >เลขไมล์</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control"
-                              required=""
-                              id="inputmig"
-                            ></input>
-                            <div class="invalid-feedback">
-                              กรุณาระบุเลขไมล์
-                            </div>
-                          </div>
-                          <div class="col-md-4">
                             <label for="inputcarfuel" class="form-label"
-                              >ชนิดเชื้อเพลิง</label
+                              >ชนิดน้ำมันเชื้อเพลิง</label
                             >
                             <select
                               id="inputcarfuel"
@@ -321,38 +284,11 @@
                               กรุณาระบุชิดเชื้อเพลิง
                             </div>
                           </div>
-                          <div class="col-md-4">
-                            <label for="inputfuel" class="form-label"
-                              >จำนวน - ลิตร</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control"
-                              required=""
-                              id="inputfuel"
-                            ></input>
-                            <div class="invalid-feedback">
-                              กรุณาระบุจำนวนลิตร
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <label for="inputprice" class="form-label"
-                              >จำนวนเงิน - บาท</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control"
-                              required=""
-                              id="inputprice"
-                            ></input>
-                            <div class="invalid-feedback">
-                              กรุณาระบุจำนวนเงิน
-                            </div>
-                          </div>
-
-                          <div class="col-md-12">
+                          
+                          
+                          <div class="col-md-8">
                             <label for="inputremark" class="form-label"
-                              >หมายเหตุ</label
+                              >รายละเอียด</label
                             >
                             <input
                               type="text"
@@ -362,21 +298,26 @@
                           </div>
                           <div class="col-md-12">
                             <button type="submit" class="btn btn-primary">
-                              บันทึก
+                              เพิ่ม
                             </button>
 
                             <button type="reset" class="btn btn-danger">
-                              ยกเลิก555666
+                              ยกเลิก
                             </button>
                           </div>
                         </form>
                       </div>
                       <div class="col-6 col-md-4">
-                        <img
-                          src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                          alt=""
-                          style="width: 100%; padding: 16px; border-radius: 20px;"
-                        />
+                        
+                            <label for="carimage" class="form-label"
+                              >รูปรถยนต์</label
+                            >
+                            <input
+                              type="file"
+                              class="form-control"
+                              id="carimage"
+                            ></input>
+                          
                       </div>
                     </div>
                   </div>
@@ -389,175 +330,156 @@
                     <table class="table datatable">
                       <thead>
                         <tr>
-                          <th scope="col">ทะเบียนรถ</th>
-                          <th scope="col">ยี่ห้อ</th>
+                          <th scope="col">ลำดับ</th>
                           <th scope="col">ประเภทรถ</th>
-                          <th scope="col">สถานะ</th>
+                          <th scope="col">ยี่ห้อ</th>
+                          <th scope="col">ทะเบียนรถ</th>
+                          <th scope="col">น้ำมันเชื้อเพลิง</th>
                           <th scope="col">รูป</th>
+                          <th scope="col">แก้ไข | ลบ</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
+                          <th scope="row">1</th>
                           <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-success"
-                              >พร้อมใช้</span
-                            >
-                          </td>
-
+                          <td>Toyota</td>
+                          <td>กก 1234 มุกดาหาร</td>
+                          <td>ดีเซล</td>
                           <td>
                             <img
                               src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
                               alt=""
                             />
                           </td>
+                          <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
                         </tr>
                         <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-warning"
-                              >ขออนุมัติซ่อมบำรุง</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-secondary"
-                              >อยู่ระหว่างซ่อมบำรุง</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถฉุกเฉิน</td>
-                          <td>
-                            <span class="badge rounded-pill bg-danger"
-                              >อนุมัติขอใช้รถ</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถตู้</td>
-                          <td>
-                            <span class="badge rounded-pill bg-warning"
-                              >ขอใช้รถ</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-success"
-                              >พร้อมใช้</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-success"
-                              >พร้อมใช้</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-success"
-                              >พร้อมใช้</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-warning"
-                              >ขออนุมัติซ่อมบำรุง</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">กก 1234 มุกดาหาร</th>
-                          <td>Toyota</td>
-                          <td>รถกระบะ</td>
-                          <td>
-                            <span class="badge rounded-pill bg-secondary"
-                              >อยู่ระหว่างซ่อมบำรุง</span
-                            >
-                          </td>
-                          <td>
-                            <img
-                              src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
-                              alt=""
-                            />
-                          </td>
-                        </tr>
+                            <th scope="row">2</th>
+                            <td>รถตู้</td>
+                            <td>Hyundai</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>เบนซิน</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>รถพยาบาล</td>
+                            <td>mercedes-benz</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>เบนซิน</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>รถกระบะ</td>
+                            <td>Toyota</td>
+                            <td>กก 1234 มุกดาหาร</td>
+                            <td>ดีเซล</td>
+                            <td>
+                              <img
+                                src="https://cdn.pixabay.com/photo/2018/03/27/18/44/ambulance-3266960__340.jpg"
+                                alt=""
+                              />
+                            </td>
+                            <td><i class="bi bi-pencil-square"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="bi bi-trash3"></i></i></td>
+                          </tr>
                       </tbody>
                     </table>
                   </div>

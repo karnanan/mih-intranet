@@ -698,10 +698,12 @@ h6 {
   font-size: 15px;
   font-weight: 400;
   color: #012970;
+  /* color: white; */
   transition: 0.3;
   /* background: #f6f9ff; */
   /* background-color: lightsteelblue; */
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-color: #ffefca;
   padding: 10px 15px;
   border-radius: 4px;
 }
@@ -820,6 +822,22 @@ h6 {
 
 .dashboard .info-card {
   padding-bottom: 10px;
+}
+
+.dashboard .request-card {
+  border-bottom: red solid 5px;
+}
+
+.dashboard .waitapprov-card {
+  border-bottom: orange solid 5px;
+}
+
+.dashboard .approv-card {
+  border-bottom: green solid 5px;
+}
+
+.dashboard .total-card {
+  border-bottom: #4154f1 solid 5px;
 }
 
 .dashboard .info-card h6 {

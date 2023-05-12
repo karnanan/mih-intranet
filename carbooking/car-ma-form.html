@@ -163,6 +163,12 @@
             <span>บันทึกการใช้รถ</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="car-management.html">
+            <i class="bi bi-folder-plus"></i>
+            <span>การจัดการข้อมูลรถยนต์</span>
+          </a>
+        </li>
         <li class="nav-heading">การเติมน้ำมันเชื้อเพลิง</li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="car-booking-fuel.html">
@@ -257,7 +263,7 @@
                     <form class="row g-3 needs-validation" novalidate>
                       <div class="col-md-3">
                         <label for="start-date" class="form-label"
-                          >วันที่</label
+                          >วันที่ซ่อม</label
                         >
                         <input
                           type="date"
@@ -265,7 +271,7 @@
                           required
                           id="start-date"
                         />
-                        <div class="invalid-feedback">กรุณาระบุวันที่-เวลา</div>
+                        <div class="invalid-feedback">กรุณาระบุวันที่</div>
                       </div>
                       <div class="col-md-3">
                         <label for="end-date" class="form-label"
@@ -277,81 +283,147 @@
                           required=""
                           id="end-date"
                         />
-                        <div class="invalid-feedback">กรุณาระบุวันที่-เวลา</div>
+                        <div class="invalid-feedback">กรุณาระบุวันที่</div>
                       </div>
-                      <div class="col-md-4">
-                        <label for="inputlocation" class="form-label"
-                          >สถานที่</label
+                      <div class="col-md-3">
+                        <label for="inputcarno" class="form-label"
+                          >ทะเบียนรถ</label
                         >
-                        <input
-                          type="text"
-                          class="form-control"
-                          required=""
-                          id="inputlocation"
-                        />
-                        <div class="invalid-feedback">กรุณาระบุสถานที่</div>
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputstate" class="form-label"
-                          >จังหวัด</label
-                        >
-                        <select id="inputstate" class="form-select" required>
+                        <select id="inputcarno" class="form-select" required>
                           <option selected disabled value="">
                             กรุณาเลือก...
                           </option>
-                          <option value="">มุกดาหาร</option>
+                          <option value="">...</option>
                         </select>
 
-                        <div class="invalid-feedback">กรุณาระบุจังหวัด</div>
+                        <div class="invalid-feedback">กรุณาระบุทะเบียนรถ</div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="inputcarmig" class="form-label"
+                          >เลขไมล์</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          required=""
+                          id="inputcarmig"
+                        />
+                        <div class="invalid-feedback">กรุณาระบุเลขไมล์</div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col">ลำดับ</th>
+                              <th scope="col">ประเภท</th>
+                              <th scope="col">จุดที่ซ่อม</th>
+                              <th scope="col">รายการ</th>
+                              <th scope="col">อาการเสีย</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>
+                                <select
+                                  id="inputtype"
+                                  class="form-select"
+                                  required
+                                >
+                                  <option selected disabled value="">
+                                    กรุณาเลือก...
+                                  </option>
+                                  <option value="">...</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select
+                                  id="inputtype"
+                                  class="form-select"
+                                  required
+                                >
+                                  <option selected disabled value="">
+                                    กรุณาเลือก...
+                                  </option>
+                                  <option value="">...</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  required=""
+                                  id="inputdetail"
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  required=""
+                                  id="inputdetail"
+                                />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">
+                          <i class="bi bi-plus-circle"></i>
+                          เพิ่มรายการ
+                        </button>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="inputvender" class="form-label"
+                          >ความเร่งด่วน</label
+                        >
+                        <select id="inputvender" class="form-select" required>
+                          <option selected disabled value="">
+                            กรุณาเลือก...
+                          </option>
+                          <option value="">...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          กรุณาระบุศูนย์บริการ/อู่
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="inputvender" class="form-label"
+                          >ศูนย์บริการ/อู่</label
+                        >
+                        <select id="inputvender" class="form-select" required>
+                          <option selected disabled value="">
+                            กรุณาเลือก...
+                          </option>
+                          <option value="">...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          กรุณาระบุศูนย์บริการ/อู่
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <label for="inputprice" class="form-label"
+                          >ค่าใช้จ่าย</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control"
+                          required=""
+                          id="inputprice"
+                        />
+                        <div class="invalid-feedback">กรุณาระบุค่าใช้จ่าย</div>
                       </div>
                       <div class="col-md-6">
-                        <label for="inputlocation" class="form-label"
-                          >ผู้โดยสาร</label
+                        <label for="inputremark" class="form-label"
+                          >หมายเหตุ</label
                         >
                         <input
                           type="text"
                           class="form-control"
-                          required=""
-                          id="inputlocation"
+                          id="inputremark"
                         />
-                        <div class="invalid-feedback">กรุณาระบุสถานที่</div>
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputtel" class="form-label"
-                          >เบอร์โทรศัพท์ติดต่อ</label
-                        >
-                        <input type="tel" class="form-control" id="inputtel" />
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputcar" class="form-label"
-                          >ประเภทรถ</label
-                        >
-                        <select id="inputcar" class="form-select">
-                          <option selected>ไม่ระบุ...</option>
-                          <option>...</option>
-                        </select>
-                      </div>
-                      <div class="col-md-2">
-                        <label for="inputstaff" class="form-label"
-                          >พนักงานขับรถ</label
-                        >
-                        <select id="inputstaff" class="form-select">
-                          <option selected>ไม่ระบุ...</option>
-                          <option>...</option>
-                        </select>
-                      </div>
-
-                      <div class="col-md-12">
-                        <label for="inputdetail" class="form-label"
-                          >รายละเอียด</label
-                        >
-                        <textarea
-                          type="text"
-                          class="form-control"
-                          required=""
-                          id="inputdetail"
-                        ></textarea>
-                        <div class="invalid-feedback">กรุณาระบุรายละเอียด</div>
                       </div>
                       <div class="col-lg-12">
                         <button type="submit" class="btn btn-primary">
@@ -366,7 +438,6 @@
                       </div>
                     </form>
                   </div>
-
                   <div
                     class="tab-pane fade profile-overview pt-2"
                     id="carbooking-list"
@@ -378,9 +449,9 @@
                           <th scope="col">วันที่ซ่อม</th>
                           <th scope="col">วันที่คาดว่าจะแล้วเสร็จ</th>
                           <th scope="col">ทะเบียนรถ</th>
-                          <th scope="col">อาการเสีย</th>
                           <th scope="col">ความเร่งด่วน</th>
                           <th scope="col">ค่าใช้จ่าย</th>
+                          <th scope="col">ศูนย์บริการ/อู่</th>
                           <th scope="col">สถานะ</th>
                         </tr>
                       </thead>
@@ -389,10 +460,10 @@
                           <th scope="row">31/03/2566</th>
                           <th>31/03/2566</th>
                           <td>กก 1234</td>
-                          <td>อาการเสีย</td>
-
                           <td>ไม่เร่งด่วน</td>
                           <td>1,000</td>
+                          <td>ศูนย์บริการ/อู่</td>
+
                           <td>
                             <span class="badge rounded-pill bg-primary"
                               >อนุมัติ</span
@@ -403,10 +474,9 @@
                           <th scope="row">31/03/2566</th>
                           <th>31/03/2566</th>
                           <td>กก 1234</td>
-                          <td>อาการเสีย</td>
-
                           <td>ไม่เร่งด่วน</td>
                           <td>1,000</td>
+                          <td>ศูนย์บริการ/อู่</td>
                           <td>
                             <span class="badge rounded-pill bg-warning"
                               >รออนุมัติ</span
@@ -417,42 +487,39 @@
                           <th scope="row">31/03/2566</th>
                           <th>31/03/2566</th>
                           <td>กก 1234</td>
-                          <td>อาการเสีย</td>
-
                           <td>ไม่เร่งด่วน</td>
                           <td>1,000</td>
+                          <td>ศูนย์บริการ/อู่</td>
                           <td>
                             <span class="badge rounded-pill bg-warning"
                               >รออนุมัติ</span
-                            >
+                            ><i class="bi bi-pencil-square ms-3"></i>
                           </td>
                         </tr>
                         <tr>
                           <th scope="row">31/03/2566</th>
                           <th>31/03/2566</th>
                           <td>กก 1234</td>
-                          <td>อาการเสีย</td>
-
                           <td>ไม่เร่งด่วน</td>
                           <td>1,000</td>
+                          <td>ศูนย์บริการ/อู่</td>
                           <td>
                             <span class="badge rounded-pill bg-warning"
                               >รออนุมัติ</span
-                            >
+                            ><i class="bi bi-pencil-square ms-3"></i>
                           </td>
                         </tr>
                         <tr>
                           <th scope="row">31/03/2566</th>
                           <th>31/03/2566</th>
                           <td>กก 1234</td>
-                          <td>อาการเสีย</td>
-
                           <td>ไม่เร่งด่วน</td>
                           <td>1,000</td>
+                          <td>ศูนย์บริการ/อู่</td>
                           <td>
                             <span class="badge rounded-pill bg-warning"
                               >รออนุมัติ</span
-                            >
+                            ><i class="bi bi-pencil-square ms-3"></i>
                           </td>
                         </tr>
                       </tbody>
